@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+@layer components {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="number"] {
+        @apply block w-full border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm;
+    }
+    input[type="file"] {
+        @apply block w-full border-neutral-300 dark:border-neutral-700  dark:text-neutral-300;
+    }
+    select {
+        @apply block w-full border-neutral-300 focus:border-indigo-500 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 rounded-md shadow-sm;
+    }
+    select option {
+        @apply bg-gray-950 text-white;
+    }
+
+    label {
+        @apply block text-sm font-medium leading-6 first-letter:capitalize;
+    }
+    .navbar {
+        @apply p-5 px-11 flex items-center justify-between;
+    }
+    .card {
+        @apply flex flex-col m-5 border border-slate-400 p-3 gap-3;
+    }
+    .primary-btn {
+        @apply flex  justify-center rounded-xl m-5 px-5 py-2 text-sm font-semibold leading-6 text-white shadow-sm border-indigo-600 border-2 bg-gray-900 hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:bg-slate-400 disabled:cursor-wait;
+    }
+    .btn {
+        @apply flex mt-3 justify-center rounded-md bg-neutral-600 px-3 py-2 text-sm font-semibold leading-6 text-neutral-400 shadow-sm hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:bg-slate-400 disabled:cursor-wait;
+    }
+    .text-link {
+        @apply font-semibold text-blue-500 hover:text-blue-600;
+    }
+    .nav-link {
+        @apply text-white hover:text-slate-300 hover:font-bold rounded-md px-3 py-2 text-sm font-medium;
+    }
+    .title {
+        @apply my-6 text-center text-3xl font-bold leading-9 text-indigo-600;
+    }
+    .error {
+        @apply text-xs text-red-500;
+    }
+    table {
+        @apply w-full text-sm text-left rounded-md shadow-lg overflow-hidden mb-6 table-auto;
+    }
+    thead {
+        @apply text-xs uppercase font-medium border-2 border-slate-100 bg-white text-indigo-600;
+    }
+    tbody tr {
+        @apply w-full p-0;
+    }
+    th {
+        @apply px-6 py-4;
+    }
+    td {
+        @apply px-6 py-4 border-2 border-slate-100;
+    }
+    .avatar {
+        @apply w-8 h-8 rounded-full overflow-hidden object-center object-cover;
+    }
+}
